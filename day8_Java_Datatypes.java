@@ -1,12 +1,9 @@
-package com.rascoding;
+package rascoding;
 import java.util.*;
 
 public class day8_Java_Datatypes {
     public static void main(String []argh)
     {
-
-
-
         Scanner sc = new Scanner(System.in);
         int t=sc.nextInt();
 

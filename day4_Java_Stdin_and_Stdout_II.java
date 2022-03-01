@@ -1,4 +1,4 @@
-package com.tutorial;
+package rascoding;
 import java.util.Scanner;
 
 public class day4_Java_Stdin_and_Stdout_II {
