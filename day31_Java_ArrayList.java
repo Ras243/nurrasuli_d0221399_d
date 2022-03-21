@@ -6,30 +6,29 @@ import java.math.*;
 import java.util.regex.*;
 
 public class day31_Java_ArrayList {
-    public static void main(String[] args) {
-        
+
+    public static void main(String[] args) {        
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int [][] data = new int[n][];
+        ArrayList<ArrayList<Integer>> data = new ArrayList<>();
         for(int i=0;i<n;i++){
             int d = sc.nextInt();
+            ArrayList<Integer> baris = new ArrayList<>();
             if (d>0){
-                data[i] = new int[d];
                 for(int j=0;j<d;j++){
-                    int elemen = sc.nextInt();
-                    data[i][j] = elemen;
+                    int element = sc.nextInt();
+                    baris.add(element);
                 }
-            }else{
-                data[i] = null;
             }
+            data.add(baris);
         } //end of input element
         
         int q = sc.nextInt();
         for(int i=0;i<q;i++){
             int x = sc.nextInt()-1;
             int y = sc.nextInt()-1;
-            if(x<n && data[x] != null && y<data[x].length){
-                int element = data[x][y];
+            if(x<n && data.get(x) != null && y<data.get(x).size()){
+                int element = data.get(x).get(y);
                 System.out.println(element);
             }
             else{
